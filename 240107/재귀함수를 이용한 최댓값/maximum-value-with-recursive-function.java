@@ -6,10 +6,10 @@ public class Main {
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     static StringTokenizer st;
 
-    public static int getMax(int[] nums, int n, int i){
-        if(i==n) return -1;
+    public static int getMax(int[] nums, int i){
+        if(i==0) return nums[i];
 
-        return Math.max(getMax(nums,n,i+1), nums[i]);
+        return Math.max(getMax(nums,i-1), nums[i]);
     }
     public static void main(String[] args) throws Exception {
         int n = Integer.parseInt(br.readLine());
@@ -20,7 +20,7 @@ public class Main {
             nums[i] = Integer.parseInt(st.nextToken());
         }
 
-    	int answer = getMax(nums,n,0);
+    	int answer = getMax(nums, n-1);
         System.out.println(answer);
     }
 }
