@@ -14,14 +14,15 @@ public class Main {
             nums[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(nums);
-
+        List<Integer> temp = new ArrayList<>();
         List<Integer> answer = new ArrayList<>();
-        for(int i=0;i<n;i+=2){
-            answer.add(nums[i/2]);
+        for(int i=0;i<n;i++){
+            temp.add(nums[i]);
+            if(i%2==0){ // 1, 3, .. 홀수번째이면
+                Collections.sort(temp);
+                answer.add(temp.get(i/2));
+            }
         }
-
-        for(Integer num: answer) System.out.print(num+" ");
-
+        for(int a:answer) System.out.print(a+" ");
     }
 }
