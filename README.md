@@ -34,3 +34,11 @@ compareTo();
 contains();
 chatAt();
 ```
+
+### 240110
+자료형별 compare
+```java
+String: compareTo(a,b);
+Integer: Integer.compare(a,b);
+
+```
