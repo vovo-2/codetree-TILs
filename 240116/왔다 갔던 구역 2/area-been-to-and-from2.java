@@ -12,21 +12,31 @@ public class Main {
 		int n = Integer.parseInt(br.readLine());
 
 		int now = 1000;
+        String buffer = "";
+
 		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(br.readLine());
 
 			int x = Integer.parseInt(st.nextToken());
 			String order = st.nextToken();
-			
-			while (x > 0) {
+
+
+            if(!buffer.equals("")){
+                if(!buffer.equals(order)){
+                    // buffer = R order= L
+                    if(buffer.equals("R")) now--;
+                    else now++;
+                }
+            }
+
+			for(int t=0;t<x;t++){
 				line[now]++;
 				
 				if(order.equals("R")) now++;
 				else now--;
-				
-				x--;
-			}
-			
+            }
+
+            buffer = order;
 
 		}
 
