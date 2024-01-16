@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
         // 여기에 코드를 작성해주세요.
 
-        int[] line = new int[1000*100*2 +1];
+        int[] line = new int[200001];
 
         int n = Integer.parseInt(br.readLine());
 
-        int now = 1000*100;
+        int now = 100000;
 
         String buffer = "";
 
@@ -27,11 +27,13 @@ public class Main {
                 else now++;
             }
             for(int t=0;t<cnt;t++){
+
                 if(order.equals("R")){
                     line[now++] = 1; //검은색
                 }else{
                     line[now--] = -1; //흰색
                 }
+
             }
 
             buffer = order;
@@ -42,6 +44,7 @@ public class Main {
         int black = 0;
         for(int j=0;j<line.length;j++){
             if(line[j]==0) continue;
+
             if(line[j]==1) black++;
             else white++;
         }
