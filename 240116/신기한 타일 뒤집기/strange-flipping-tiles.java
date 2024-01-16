@@ -10,32 +10,29 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         int now = 100000;
 
-        String buffer = "";
+        int x1 =0;
+        int x2 =0;
 
         for(int i=0;i<n;i++){
             st = new StringTokenizer(br.readLine());
             
-            int cnt = Integer.parseInt(st.nextToken());
+            int x = Integer.parseInt(st.nextToken());
             String order = st.nextToken();
 
-            if(!buffer.equals("")){
-                if(!buffer.equals(order)){
-                    if(order.equals("L"))now--;
-                    else now++;
-                }
+            if(order.equals("R")){
+                x1 = now;
+                x2 = now+x;
+
+                now+=x;
+
+                for(int j=x1;j<x2;j++) line[j]=1;
+            }else{
+                x1 = now-x;
+                x2 = now;
+
+                now-=x;
+                for(int j=x1;j<x2;j++) line[j]=-1;
             }
-
-            for(int t=0;t<cnt;t++){
-
-                if(order.equals("R")){
-                    line[now++] = 1; //검은색
-                }else{
-                    line[now--] = -1; //흰색
-                }
-
-            }
-
-            buffer = order;
 
         }
 
