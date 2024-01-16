@@ -6,12 +6,8 @@ public class Main {
     static StringTokenizer st;
 
     public static void main(String[] args) throws Exception {
-        // 여기에 코드를 작성해주세요.
-
         int[] line = new int[200001];
-
         int n = Integer.parseInt(br.readLine());
-
         int now = 100000;
 
         String buffer = "";
@@ -28,6 +24,7 @@ public class Main {
                     else now++;
                 }
             }
+
             for(int t=0;t<cnt;t++){
 
                 if(order.equals("R")){
@@ -48,7 +45,7 @@ public class Main {
             if(line[j]==0) continue;
 
             if(line[j]==1) black++;
-            else white++;
+            else if(line[j]==-1) white++;
         }
 
         System.out.println(white+" "+black);
