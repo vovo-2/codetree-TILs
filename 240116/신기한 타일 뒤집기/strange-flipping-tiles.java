@@ -18,6 +18,7 @@ public class Main {
 
         for(int i=0;i<n;i++){
             st = new StringTokenizer(br.readLine());
+            
             int cnt = Integer.parseInt(st.nextToken());
             String order = st.nextToken();
 
@@ -25,15 +26,14 @@ public class Main {
                 if(order.equals("L"))now--;
                 else now++;
             }
-
-            while(cnt>0){
+            for(int t=0;t<cnt;t++){
                 if(order.equals("R")){
                     line[now++] = 1; //검은색
                 }else{
                     line[now--] = -1; //흰색
                 }
-                cnt--;
             }
+
             buffer = order;
 
         }
