@@ -22,9 +22,11 @@ public class Main {
             int cnt = Integer.parseInt(st.nextToken());
             String order = st.nextToken();
 
-            if(!buffer.equals("") && !buffer.equals(order)){
-                if(order.equals("L"))now--;
-                else now++;
+            if(!buffer.equals("")){
+                if(!buffer.equals(order)){
+                    if(order.equals("L"))now--;
+                    else now++;
+                }
             }
             for(int t=0;t<cnt;t++){
 
