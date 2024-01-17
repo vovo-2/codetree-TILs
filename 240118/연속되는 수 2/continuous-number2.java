@@ -17,14 +17,14 @@ public class Main {
         int answer = 0;
         for(int i=0;i<n;i++){
             if(i==0 || num[i]!=num[i-1]) {
-                answer = Math.max(answer, cnt);
                 cnt=1;
             }else{
                 cnt++;
             }
+            
+            answer = Math.max(answer, cnt);
         }
 
-        answer = Math.max(answer,cnt);
 
         System.out.println(answer);
 
