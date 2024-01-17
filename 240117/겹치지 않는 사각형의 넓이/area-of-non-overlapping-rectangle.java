@@ -9,11 +9,11 @@ public class Main {
         int map[][] = new int[2001][2001];
 
         st = new StringTokenizer(br.readLine());
-        int x1 = Integer.parseInt(st.nextToken());
-        int y1 = Integer.parseInt(st.nextToken());
+        int x1 = Integer.parseInt(st.nextToken())+1000;
+        int y1 = Integer.parseInt(st.nextToken())+1000;
 
-        int x2 = Integer.parseInt(st.nextToken());
-        int y2 = Integer.parseInt(st.nextToken());
+        int x2 = Integer.parseInt(st.nextToken())+1000;
+        int y2 = Integer.parseInt(st.nextToken())+1000;
 
         for(int x=x1;x<x2;x++){
             for(int y=y1;y<y2;y++) map[y][x] = 1;
@@ -21,22 +21,22 @@ public class Main {
 
 
         st = new StringTokenizer(br.readLine());
-         x1 = Integer.parseInt(st.nextToken());
-         y1 = Integer.parseInt(st.nextToken());
+         x1 = Integer.parseInt(st.nextToken())+1000;
+         y1 = Integer.parseInt(st.nextToken())+1000;
 
-         x2 = Integer.parseInt(st.nextToken());
-         y2 = Integer.parseInt(st.nextToken());
+         x2 = Integer.parseInt(st.nextToken())+1000;
+         y2 = Integer.parseInt(st.nextToken())+1000;
 
         for(int x=x1;x<x2;x++){
             for(int y=y1;y<y2;y++) map[y][x] = 2;
         }
 
 st = new StringTokenizer(br.readLine());
-         x1 = Integer.parseInt(st.nextToken());
-         y1 = Integer.parseInt(st.nextToken());
+         x1 = Integer.parseInt(st.nextToken())+1000;
+         y1 = Integer.parseInt(st.nextToken())+1000;
 
-         x2 = Integer.parseInt(st.nextToken());
-         y2 = Integer.parseInt(st.nextToken());
+         x2 = Integer.parseInt(st.nextToken())+1000;
+         y2 = Integer.parseInt(st.nextToken())+1000;
 
 
         for(int x=x1;x<x2;x++){
