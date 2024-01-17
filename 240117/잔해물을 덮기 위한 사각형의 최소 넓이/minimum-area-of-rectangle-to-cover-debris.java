@@ -46,7 +46,10 @@ public class Main {
                 }
             }
         }
-        System.out.println((max_x - min_x+1) * (max_y-min_y+1));
+        if(min_y==Integer.MAX_VALUE && min_x == Integer.MAX_VALUE && max_y==0 && max_x ==0)
+            System.out.println(0);
+        else
+            System.out.println((max_x - min_x+1) * (max_y-min_y+1));
 
     }
 }
