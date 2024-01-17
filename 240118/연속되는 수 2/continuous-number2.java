@@ -13,7 +13,7 @@ public class Main {
             num[i] = Integer.parseInt(br.readLine());
         }
 
-        int cnt = 0;
+        int cnt = 1;
         int answer = -1;
         for(int i=0;i<n;i++){
             if(i==0 || num[i]!=num[i-1]) {
