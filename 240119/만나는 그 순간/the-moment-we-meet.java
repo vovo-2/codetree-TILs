@@ -7,8 +7,8 @@ public class Main {
 	static StringTokenizer st;
 
 	public static void main(String[] args) throws Exception {
-        int timeline1[] = new int[1001];
-        int timeline2[] = new int[1001];
+        int timeline1[] = new int[1000*1000+1];
+        int timeline2[] = new int[1000*1000+1];
         int LEN = timeline1.length;
         
         Arrays.fill(timeline1, Integer.MAX_VALUE);
