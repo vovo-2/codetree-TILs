@@ -34,6 +34,9 @@ compareTo();
 contains();
 chatAt();
 ```
+--
+Comparator: compare(Point p1, Point p2)
+Comparable: compareTo(Point other)
 
 ### 240110
 자료형별 compare
