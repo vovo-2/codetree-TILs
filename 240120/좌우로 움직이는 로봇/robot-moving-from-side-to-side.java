@@ -55,7 +55,7 @@ public class Main {
         boolean is_before_near=false;
         int answer = 0;
 
-        for(int i=1;i<50;i++){
+        for(int i=1;i<1_000_000+1;i++){
             if(i>now[0] && i>now[1]) break;
             if(robot[0][i] == robot[1][i]){
                 if(is_before_near) continue;
