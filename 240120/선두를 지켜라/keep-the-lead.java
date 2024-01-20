@@ -31,19 +31,17 @@ public class Main {
 
         int cnt = 0;
         int answer = 0;
+
+        target = -1;
         for(int i=0;i<1000*1000+1;i++){
             if(move[0][i] == move[1][i]) continue;
 
             if(move[0][i]<move[1][i]){
-                if(target==0 && cnt!= 0) answer++;
-
+                if(target==0) answer++;
                 target = 1;
-                cnt++;
             }else{
-                if(target==1 && cnt!= 0) answer++;
-
-                cnt++;
-                target=0;
+                if(target==1) answer++;
+                target = 0;
             }
         }
 
