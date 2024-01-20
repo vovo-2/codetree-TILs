@@ -36,26 +36,24 @@ public class Main {
 
         }
 
-        int min_robot = -1;
-        int max_robot = -1;
+        int max_t =0;
         if(now[0]< now[1]){
-            min_robot = 0;
-            max_robot =1;
+            for(int i=now[0]+1; i<=now[1];i++){
+                robot[0][i] = robot[0][now[0]];
+            }
+            max_t = now[1];
         }else if(now[0] > now[1]){
-            min_robot = 1;
-            max_robot =0;
+            for(int i=now[1]+1; i<=now[0];i++){
+                robot[1][i] = robot[1][now[1]];
+            }
+            max_t = now[0];
         }
         
-        if(min_robot!=-1){
-            for(int i = now[min_robot]+1;i<=now[max_robot];i++){
-                robot[min_robot][i] = robot[min_robot][now[min_robot]];
-            }
-        }
 
         boolean is_before_near=false;
         int answer = 0;
 
-        for(int i=1;i<1_000_000+1;i++){
+        for(int i=1;i<max_t+1;i++){
             if(i>now[0] && i>now[1]) break;
             if(robot[0][i] == robot[1][i]){
                 if(is_before_near) continue;
