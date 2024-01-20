@@ -50,12 +50,21 @@ public class Main {
         }
         
 
+        boolean is_before_near=false;
         int answer = 0;
 
         for(int i=1;i<max_t+1;i++){
-            if(robot[0][i] == robot[1][i] && robot[0][i-1]!=robot[1][i-1])
-                answer++;
 
+            if(robot[0][i] == robot[1][i]){
+                if(is_before_near) {
+                    is_before_near=false;
+                    continue;
+                }
+                answer++;
+                is_before_near=true;
+            }else{
+                is_before_near=false;
+            }
         }
         System.out.println(answer);
     }
