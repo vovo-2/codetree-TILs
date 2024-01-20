@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        int[][] robot = new int[2][101];
+        int[][] robot = new int[2][1_000_000+1];
         int[] now = new int[2];
 
         st = new StringTokenizer(br.readLine());
@@ -36,7 +36,7 @@ public class Main {
         }
         boolean is_before_near=false;
         int answer = 0;
-        for(int i=1;i<101;i++){
+        for(int i=1;i<1_000_000+1;i++){
             if(robot[0][i] == robot[1][i]){
                 if(is_before_near) continue;
                 answer++;
