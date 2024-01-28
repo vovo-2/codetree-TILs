@@ -23,15 +23,15 @@ public class Main {
         int dy[] = {-1,1,0,0}; //상하좌우 
         int dx[] = {0,0,-1,1};
         for(int y=0;y<N;y++){
-                int cnt = 0;
             for(int x=0;x<N;x++){
+                int cnt = 0;
                 for(int i=0;i<4;i++){
                     int nx  = x+dx[i];
                     int ny = y+dy[i];
                     if(in_range(nx,ny,N) && adj[ny][nx]==1) cnt++;
                 }
-            }
             if(cnt>=3) answer++;
+            }
         }
         System.out.println(answer);
     }
