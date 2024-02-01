@@ -41,7 +41,27 @@ Comparable: compareTo(Point other)
 ### 240110
 자료형별 compare
 ```java
-String: compareTo(a,b);
+String: compareTo(b);
 Integer: Integer.compare(a,b);
 
+```
+
+### 240115
+숫자(10진법) ⇒ 2진법
+숫자를 계속 2로 나눠주며 나머지를 쭉 적어주는 식으로 이진법을 만들 수 있다.
+```java
+  while(true){
+  	if(n<2){
+  		answer[i++] = n;
+  		break;
+  	}
+  	answer[i++] = n%2;
+  	n=n/2;
+  }
+```
+
+2진법 => 10진법
+숫자를 계속 2로 나눈 나머지로 만든 2진법을 10진법으로 바꾸려면 반대로 *2를 해주면 된다.
+```java
+num = num*2 + binary[i];
 ```
